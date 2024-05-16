@@ -727,20 +727,16 @@ h1.h2,h3,h4,h5,h6 {
   margin-bottom: 0.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mb-7 {
   margin-bottom: 1.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .box-border {
@@ -876,14 +872,6 @@ h1.h2,h3,h4,h5,h6 {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[350\%\] {
-  width: 350%;
-}
-
-.w-\[500\%\] {
-  width: 500%;
 }
 
 .max-w-screen-xl {
@@ -1417,24 +1405,24 @@ h1.h2,h3,h4,h5,h6 {
   justify-items: stretch;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-12 {
   gap: 3rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2153,27 +2141,22 @@ h1.h2,h3,h4,h5,h6 {
   line-height: 2rem;
 }
 
-.text-\[350\%\] {
-  font-size: 350%;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-\[250\%\] {
   font-size: 250%;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-\[350\%\] {
+  font-size: 350%;
 }
 
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -2274,14 +2257,14 @@ h1.h2,h3,h4,h5,h6 {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-bright-red {
+  --tw-text-opacity: 1;
+  color: hsl(356 69% 56% / var(--tw-text-opacity));
+}
+
 .text-light-blue-text {
   --tw-text-opacity: 1;
   color: hsl(230 17% 14% / var(--tw-text-opacity));
-}
-
-.text-lime-green {
-  --tw-text-opacity: 1;
-  color: hsl(163 72% 41% / var(--tw-text-opacity));
 }
 
 .text-light-dark-gray-text {
@@ -2289,9 +2272,9 @@ h1.h2,h3,h4,h5,h6 {
   color: hsl(228 12% 44% / var(--tw-text-opacity));
 }
 
-.text-bright-red {
+.text-lime-green {
   --tw-text-opacity: 1;
-  color: hsl(356 69% 56% / var(--tw-text-opacity));
+  color: hsl(163 72% 41% / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2614,6 +2597,10 @@ h1.h2,h3,h4,h5,h6 {
   transition-duration: 500ms;
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -2771,12 +2758,6 @@ h1.h2,h3,h4,h5,h6 {
   background-color: hsl(225 100% 98% / var(--tw-bg-opacity));
 }
 
-.before\:bg-instagram-gradient-one::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: hsl(37 97% 70% / var(--tw-bg-opacity));
-}
-
 .before\:bg-youtube::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -2822,6 +2803,37 @@ h1.h2,h3,h4,h5,h6 {
   --transform-circle: 100%;
 }
 
+.dark\:bg-dark-blue-backgorund:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
+}
+
+.dark\:bg-dark-blue-cards:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
+}
+
+.dark\:text-dark-blue-text:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: hsl(228 34% 66% / var(--tw-text-opacity));
+}
+
+.dark\:text-dark-texto:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.dark\:text-light-dark-gray-text:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: hsl(228 12% 44% / var(--tw-text-opacity));
+}
+
+.dark\:before\:bg-dark-blue-bg-top:is(.dark *)::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(232 19% 15% / var(--tw-bg-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration-line: underline;
@@ -2853,6 +2865,38 @@ h1.h2,h3,h4,h5,h6 {
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-10 {
+    height: 2.5rem;
+  }
+
+  .lg\:h-8 {
+    height: 2rem;
+  }
+
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
+  .lg\:w-16 {
+    width: 4rem;
+  }
+
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .lg\:w-\[10\%\] {
+    width: 10%;
+  }
+
+  .lg\:w-\[5\%\] {
+    width: 5%;
+  }
+
+  .lg\:w-\[8\%\] {
+    width: 8%;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2866,52 +2910,17 @@ h1.h2,h3,h4,h5,h6 {
     padding-bottom: 6rem;
   }
 
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-dark-blue-backgorund {
-    --tw-bg-opacity: 1;
-    background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-dark-blue-cards {
-    --tw-bg-opacity: 1;
-    background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-dark-blue-text {
-    --tw-text-opacity: 1;
-    color: hsl(228 34% 66% / var(--tw-text-opacity));
-  }
-
-  .dark\:text-dark-texto {
-    --tw-text-opacity: 1;
-    color: hsl(0 0% 100% / var(--tw-text-opacity));
-  }
-
-  .dark\:text-light-dark-gray-text {
-    --tw-text-opacity: 1;
-    color: hsl(228 12% 44% / var(--tw-text-opacity));
-  }
-
-  .dark\:before\:bg-dark-blue-bg-top::before {
-    content: var(--tw-content);
-    --tw-bg-opacity: 1;
-    background-color: hsl(232 19% 15% / var(--tw-bg-opacity));
-  }
-
-  @media (min-width: 1024px) {
-    .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
-      paint-order: markers;
-    }
+  .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.dark *) {
+    paint-order: markers;
   }
 }
