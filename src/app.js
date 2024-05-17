@@ -2,9 +2,11 @@ const input = document.querySelector("#theme");
 const divSun = document.querySelector("#moon");
 const moon = document.querySelector("#svgMoon")
 const padreHtml = document.documentElement
+const texto = document.querySelector("#text");
 
 function comprobarInput(){
   if (input.checked) {
+    texto.textContent = "Dark Mode"
     localStorage.setItem("theme","dark")
     padreHtml.classList.remove("light")
     padreHtml.classList.add("dark")
@@ -14,6 +16,7 @@ function comprobarInput(){
     moon.classList.add("block")
     moon.classList.remove("hidden")
   } else {
+    texto.textContent= "Light Mode"
     localStorage.setItem("theme","light")
     padreHtml.classList.remove("dark")
     padreHtml.classList.add("light")
